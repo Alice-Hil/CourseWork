@@ -1,0 +1,20 @@
+{
+	"name": "test_story",
+	"shortCode": "dfr",
+	"episodesList": [
+		{
+			"name": "episode1",
+			"id": "1",
+			"options": [
+				{
+					"optionName": "des_1",
+					"nextItemId": "2"
+				},
+				{
+					"optionName": "des_2",
+					"nextItemId": "3"
+				}
+			]
+		}
+	]
+}

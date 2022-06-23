@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+}
+
+.header{
+    height: 50px;
+    background-color: #c2eeff;
+    border-bottom: 2px solid dodgerblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h3{
+    margin: auto 50px;
+    color: #1b77ff;
+}
+
+.list_item{
+    display: inline-block;
+    padding: 30px 10px;
+    text-align: center;
+    color: darkblue;
+    margin: 20px 20px;
+    width: 200px;
+    border: 2px solid darkblue;
+    background-color: #dbf3ff;
+}
+
+.list_item:hover{
+    background-color: #1b77ff;
+}
+
+.list_item+h3:hover{
+    content: "dddd";
+}
+
+
+.library_list{
+    vertical-align: center;
+}
+
+.top_bar{
+    margin-bottom: 10px;
+    background-color: #c2eeff;
+    border-bottom: 2px solid dodgerblue;
+    height: 30px;
+}
+
+.top_bar a{
+    text-decoration: none;
+}
+
+.top_bar p{
+    display: inline;
+    margin: 30px;
+    color: #1b77ff;
+}
+
+.list{
+    width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -60px;
+}
+
+.list a{
+    text-decoration: none;
+}
+
+.list_block{
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    color: black;
+}
+
+.popup{
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    visibility: hidden;
+    margin: 0 auto;
+    width: 70%;
+    min-width: 320px;
+    max-width: 700px;
+    /* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    /* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    /* внешняя тень блока */
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    /* полная прозрачность окна, появление при клике */
+    opacity: 0;
+    /* эффект перехода (появление) */
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+}
+/* активируем появление окна и затемнение фона */
+.overlay:target+.popup {
+    top: 17%; /* положение окна от верха страницы при появлении */
+    visibility: visible;
+    opacity: 1; /* убираем прозрачность */
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    /* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.popup textarea{
+    font-family: sans-serif;
+    max-width: 550px;
+    min-width: 550px;
+    max-height: 360px;
+}
+
+.buttons_block{
+    width: 135px;
+    margin-left: auto;
+    margin-right: 33px;
+}
+
+.buttons_block input{
+    width: 60px;
+    margin-left: 5px;
+
+}
+
+.operational{
+
+}
